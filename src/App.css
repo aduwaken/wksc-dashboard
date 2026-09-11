@@ -1663,3 +1663,218 @@ select {
     left: -15px;
 
 }
+
+/* ================================= */
+/* REPORT LOCATION SELECTOR */
+/* ================================= */
+
+.location-selector {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto 25px auto;
+    padding: 20px 22px;
+
+    background-color: rgba(16, 24, 39, 0.72);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 10px;
+
+    backdrop-filter: blur(5px);
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ================================= */
+/* LOCATION HEADER */
+/* ================================= */
+
+.location-selector-header {
+    margin-bottom: 17px;
+}
+
+.location-selector-header span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #d8b45a;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.location-selector-header p {
+    margin: 0;
+
+    color: #e5e7eb;
+
+    font-size: 13px;
+}
+
+
+/* ================================= */
+/* LOCATION FIELDS */
+/* ================================= */
+
+.location-selector-fields {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+
+/* ================================= */
+/* LOCATION FIELD */
+/* ================================= */
+
+.location-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.location-field label {
+    color: #dbe4ef;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ================================= */
+/* LOCATION SELECT */
+/* ================================= */
+
+.location-field select {
+    width: 100%;
+
+    min-height: 43px;
+
+    padding: 0 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    color: #172235;
+
+    font-size: 13px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.location-field select:hover {
+    border-color: #d8b45a;
+}
+
+.location-field select:focus {
+    border-color: #315b8a;
+
+    box-shadow:
+        0 0 0 2px rgba(49, 91, 138, 0.25);
+}
+
+.location-field select:disabled {
+    background-color: rgba(255, 255, 255, 0.55);
+
+    color: #64748b;
+
+    cursor: not-allowed;
+}
+
+
+/* ================================= */
+/* SELECTED LOCATION */
+/* ================================= */
+
+.selected-location {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 16px;
+    padding-top: 13px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    color: #e5e7eb;
+
+    font-size: 12px;
+}
+
+.selected-location span {
+    color: #94a3b8;
+}
+
+.selected-location strong {
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+
+/* ================================= */
+/* LOCATION RESPONSIVE */
+/* ================================= */
+
+@media (max-width: 850px) {
+
+    .location-selector-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .location-selector {
+        padding: 18px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .location-selector {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .location-selector-header p {
+        font-size: 12px;
+    }
+
+    .selected-location {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+    .selected-location span:not(:first-child) {
+        display: none;
+    }
+
+}
